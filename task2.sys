@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bindu Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root{
+            --neon-pink:#ff2d95;
+            --neon-cyan:#00eaff;
+            --purple-dark:#0a0214;
+            --card-bg:#15041e;
+            --text-light:#e3e3e3;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background: var(--purple-dark);
+            color: var(--text-light);
+            overflow-x:hidden;
+        }
+
+        /* Animated Wavy Background */
+        body::before{
+            content:'';
+            position:fixed;
+            top:-200px;
+            left:-200px;
+            width:700px;
+            height:700px;
+            background: radial-gradient(circle, var(--neon-cyan), transparent);
+            opacity:0.35;
+            filter:blur(100px);
+            animation:move1 12s infinite alternate;
+            z-index:-1;
+        }
+        body::after{
+            content:'';
+            position:fixed;
+            bottom:-250px;
+            right:-200px;
+            width:700px;
+            height:700px;
+            background: radial-gradient(circle, var(--neon-pink), transparent);
+            opacity:0.3;
+            filter:blur(120px);
+            animation:move2 10s infinite alternate;
+            z-index:-1;
+        }
+
+        @keyframes move1{
+            from{transform:translate(0,0);}
+            to{transform:translate(120px,80px);}
+        }
+        @keyframes move2{
+            from{transform:translate(0,0);}
+            to{transform:translate(-120px,-90px);}
+        }
+
+        /* Header */
+        header{
+            background:rgba(0,0,0,0.3);
+            backdrop-filter:blur(10px);
+            padding:20px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:1px solid var(--neon-cyan);
+        }
+
+        header h1{
+            color:var(--neon-cyan);
+            font-size:26px;
+            font-weight:600;
+        }
+
+        nav a{
+            margin-left:20px;
+            color:var(--text-light);
+            text-decoration:none;
+            transition:0.3s;
+            border-bottom:1px solid transparent;
+        }
+
+        nav a:hover{
+            color:var(--neon-pink);
+            border-bottom:1px solid var(--neon-pink);
+        }
+
+        /* Hero Section */
+        .hero{
+            text-align:center;
+            padding:70px 20px;
+        }
+
+        .hero h2{
+            font-size:40px;
+            color:white;
+        }
+
+        .hero span{
+            color:var(--neon-pink);
+        }
+
+        /* Containers */
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:40px auto;
+            background:rgba(21,4,30,0.6);
+            border:1px solid rgba(255,255,255,0.2);
+            padding:25px;
+            border-radius:14px;
+            backdrop-filter:blur(8px);
+            transition:0.3s;
+        }
+
+        h2{
+            font-size:26px;
+            margin-bottom:10px;
+            color:var(--neon-cyan);
+        }
+
+        .container:hover{
+            border-color:var(--neon-pink);
+            transform:translateY(-4px);
+        }
+
+        ul{
+            margin-left:20px;
+            line-height:1.8;
+        }
+
+        /* Project Cards */
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .project-card{
+            background:rgba(0,0,0,0.35);
+            padding:15px;
+            border-radius:12px;
+            border:1px solid var(--neon-cyan);
+            transition:0.3s;
+        }
+
+        .project-card:hover{
+            border-color:var(--neon-pink);
+            transform:scale(1.03);
+        }
+
+        /* Social Icons */
+        .social-icons{
+            text-align:center;
+            margin-top:25px;
+        }
+
+        .social-icons a{
+            font-size:30px;
+            margin:0 10px;
+            color:var(--neon-cyan);
+            transition:0.3s;
+        }
+
+        .social-icons a:hover{
+            color:var(--neon-pink);
+            transform:scale(1.2);
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            margin-top:30px;
+            color:#aaa;
+            border-top:1px solid var(--neon-cyan);
+            background:rgba(0,0,0,0.4);
+        }
+
+        @media(max-width:600px){
+            header{
+                flex-direction:column;
+                text-align:center;
+            }
+            nav{margin-top:10px;}
+            .hero h2{font-size:32px;}
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Bindu Portfolio</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Hello, I'm <span>Bindu</span></h2>
+    <p>Pursuing <b>3rd year B.Tech</b> at <b>Srinivasa Ramanujan Institute of Technology</b>.  
+    I build modern cyberpunk-style web designs using HTML & CSS.</p>
+</section>
+
+<div class="container" id="about">
+    <h2>About Me</h2>
+    <p>I am a frontend enthusiast interested in futuristic UI, neon themes, and smooth web animations.</p>
+</div>
+
+<div class="container" id="skills">
+    <h2>Basic Skills</h2>
+    <ul>
+        <li>HTML – Semantic structure</li>
+        <li>CSS – Layouts & neon themes</li>
+        <li>Responsive Web Design</li>
+        <li>Flexbox positioning</li>
+        <li>Basic UI/UX</li>
+    </ul>
+</div>
+
+<div class="container" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Cyberpunk Portfolio</h3>
+            <p>Neon themed futuristic UI.</p>
+        </div>
+        <div class="project-card">
+            <h3>Landing Page</h3>
+            <p>Modern and colorful web layout.</p>
+        </div>
+        <div class="project-card">
+            <h3>UI Practice</h3>
+            <p>Flexbox, alignment, animated elements.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> bindu@example.com</p>
+    <p><strong>Phone:</strong> 9876543210</p>
+    <p><strong>Location:</strong> India</p>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+</div>
+
+<footer>
+    © 2025 Bindu — All Rights Reserved.
+</footer>
+
+</body>
+</html>
