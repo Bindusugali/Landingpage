@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressive Landing Page</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(6px);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdf6c;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 12px 28px;
+      background-color: #ffdf6c;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #ffe89b;
+    }
+
+    /* Columns Section */
+    .columns {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 80px 40px;
+    }
+
+    .col-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      width: 30%;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .col-box:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Divided Section */
+    .section-split {
+      display: flex;
+      align-items: center;
+      padding: 100px 40px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .section-split img {
+      width: 45%;
+      border-radius: 15px;
+      margin-right: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-split .content {
+      width: 50%;
+    }
+
+    .section-split h3 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-split p {
+      font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Creative Landing Page</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Make Your Ideas Come Alive</h2>
+    <p>Crafting beautiful digital experiences with creativity and passion.</p>
+    <button>Get Started</button>
+  </section>
+
+  <section class="columns">
+    <div class="col-box">
+      <h3>Column One</h3>
+      <p>Neat layouts and creative designs that stand out beautifully.</p>
+    </div>
+
+    <div class="col-box">
+      <h3>Column Two</h3>
+      <p>Perfect spacing, alignment, colors, and professional visuals.</p>
+    </div>
+
+    <div class="col-box">
+      <h3>Column Three</h3>
+      <p>Experience an impressive, modern, and clean design approach.</p>
+    </div>
+  </section>
+
+  <section class="section-split">
+    <div class="animated-box">
+      <div class="overlay-content">
+        <h2>Creative Visual</h2>
+        <p>Beautiful animation with content inside</p>
+      </div>
+    </div>
+    <div class="content">
+      <h3>Beautiful Split Section</h3>
+      <p>
+        This section now includes a stunning animated gradient box to make the design more impressive and modern.
+      </p>
+    </div>
+  </section>
+
+  <style>
+    .animated-box {
+      width: 45%;
+      height: 300px;
+      border-radius: 15px;
+      margin-right: 40px;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animated-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay-content {
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+
+  <footer>
+    <p>© 2025 Creative Landing Page. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
